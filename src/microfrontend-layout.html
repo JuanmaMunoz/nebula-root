@@ -1,36 +1,29 @@
 <single-spa-router>
-    <!--<route path="login">
-      <application name="@nebula/nebula-login"></application>
-    </route>
-    <route path="certs">
-      <nav>
-        <application name="@nebula/nebula-header"></application>
-      </nav>
-      <application name="@nebula/nebula-cert"></application>
-    </route>
     <route path="users">
-      <nav>
-        <application name="@nebula/nebula-header"></application>
-      </nav>
-      <nav>
-        <application name="@nebula/nebula-menu"></application>
-      </nav>
-      <application name="@nebula/nebula-users"></application>
-    </route>
-    <route default>
-      <application name="@nebula/nebula-login"></application>
-    </route>-->
-    <route default>
         <div class="overflow-hidden">
           <application name="@nebula/nebula-header"></application>
           <div class="row">
-            <div class="col-sm-3 col-xl-2 vh-100 bg-light">
+            <div class="col-sm-3 col-xl-2 vh-100 bg-light border-end">
               <application name="@nebula/nebula-menu"></application>
             </div>
-            <div class="col min-vh-100 bg-secondary">
+            <div class="col min-vh-100">
               <application name="@nebula/nebula-users"></application>
+            </div>
           </div>
         </div>
     </route>
-    
+
+    <route path="cert">
+      <div class="overflow-hidden">
+        <application name="@nebula/nebula-header"></application>
+        <div class="row">
+          <div class="col-sm-3 col-xl-2 vh-100 bg-light border-end">
+            <application name="@nebula/nebula-menu"></application>
+          </div>
+          <div class="col min-vh-100">
+            <application name="@nebula/nebula-cert"></application>
+          </div>
+        </div>
+      </div>
+  </route>
 </single-spa-router>
