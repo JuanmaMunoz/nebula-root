@@ -2,6 +2,7 @@
   "name": "@nebula/root-config",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
+    "webpack:start": "webpack serve --port 8080",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
@@ -45,6 +46,7 @@
     "single-spa": "^5.9.3",
     "@types/webpack-env": "^1.16.2",
     "single-spa-layout": "^1.6.0"
+
   },
   "types": "dist/nebula-root-config.d.ts"
 }
