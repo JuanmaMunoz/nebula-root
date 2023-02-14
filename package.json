@@ -2,7 +2,7 @@
   "name": "@nebula/root-config",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
-    "webpack:start": "webpack serve --port 8080",
+    "webpack:start": "webpack serve --port 9001",
     "lint": "eslint src --ext js,ts,tsx",
     "test": "cross-env BABEL_ENV=test jest --passWithNoTests",
     "format": "prettier --write .",
@@ -10,6 +10,7 @@
     "prepare": "husky install",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
+    "build:webpack:dev": "webpack",
     "build:types": "tsc"
   },
   "devDependencies": {
